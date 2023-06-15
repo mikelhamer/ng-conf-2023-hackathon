@@ -1,0 +1,17 @@
+.gamemap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.seperator {
+    background-color: black;
+    height: 2px;
+    width: 100%;
+}
+
+.characterSection {
+    width: 350px;
+}
