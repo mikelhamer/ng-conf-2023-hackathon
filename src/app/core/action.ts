@@ -10,7 +10,7 @@ export enum AttackType {
 
 export interface Action {
   source: Player
-  target: Player
-  attackType: AttackType,
-  gameOver: boolean;
+  target?: Player
+  attackType?: AttackType,
+  gameOver?: boolean;
 }
