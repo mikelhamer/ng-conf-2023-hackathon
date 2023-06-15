@@ -1,0 +1,18 @@
+.alfredBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+.alfredSays {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    text-align: center;
+}
+
+.aifredImage {
+    justify-self: flex-end;
+}
