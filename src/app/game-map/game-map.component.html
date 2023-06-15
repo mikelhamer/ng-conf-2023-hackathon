@@ -1,4 +1,4 @@
-<div class="gamemap">
+<div class="gamemap" *ngIf="!batmanWon && !jokerWon">
   <div class="characterSection">
     <app-character [characterImage]="currentEnemy.characterImage"
                    [name]="currentEnemy.name"
@@ -20,4 +20,9 @@
     </app-character>
   </div>
 </div>
-
+<div class="gamemap" *ngIf="batmanWon">
+  <h1>You won!</h1>
+</div>
+<div class="gamemap" *ngIf="jokerWon">
+  <h1>Game Over!</h1>
+</div>

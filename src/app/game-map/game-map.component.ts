@@ -1,8 +1,10 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {CharacterComponent} from '../character/character.component';
 import {CharacterTemplate} from '../models/character_template';
 import {PlayerName} from '../core/action';
+import { Subscription } from 'rxjs';
+import { GameService } from '../core/game.service';
 
 @Component({
   selector: 'app-game-map',
@@ -13,6 +15,24 @@ import {PlayerName} from '../core/action';
 })
 export class GameMapComponent {
   constructor() {
+  }
+
+  actionSubscription: Subscription = new Subscription();
+  gameService: GameService = inject(GameService);
+
+  batmanWon = false;
+  jokerWon = false;
+
+  ngOnInit(): void {
+    this.actionSubscription = this.gameService.onAction(action => {
+      if (action.gameOver) {
+        if (action.sourcePlayer === PlayerName.JOKER) {
+          this.batmanWon = true;
+        } else {
+          this.jokerWon = true;
+        }
+      }
+    })
   }
 
   currentEnemy: CharacterTemplate = {
