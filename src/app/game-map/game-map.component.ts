@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CharacterComponent } from '../character/character.component';
-import { CharacterTemplate } from '../models/character_template';
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {CharacterComponent} from '../character/character.component';
+import {CharacterTemplate} from '../models/character_template';
+import {PlayerName} from '../core/action';
 
 @Component({
   selector: 'app-game-map',
@@ -16,17 +17,20 @@ export class GameMapComponent {
 
   currentEnemy: CharacterTemplate = {
     characterImage: 'assets/character_images/joker.jpg',
-    name: 'Joker',
+    name: PlayerName.JOKER,
     max_hp: 50,
     max_mp: 10,
-    strength: 2
+    physicalStrength: 2,
+    magicStrength: 2,
   }
 
   currentHero: CharacterTemplate = {
     characterImage: 'assets/character_images/batman.jpg',
-    name: 'Batman',
+    name: PlayerName.BATMAN,
     max_hp: 60,
     max_mp: 20,
-    strength: 5
+    physicalStrength: 2,
+    magicStrength: 2,
   }
+
 }

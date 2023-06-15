@@ -1,6 +1,11 @@
-export enum Player {
+export enum PlayerName {
   BATMAN,
   JOKER
+}
+
+export interface Attack {
+  type: AttackType,
+  strength: number
 }
 
 export enum AttackType {
@@ -9,8 +14,8 @@ export enum AttackType {
 }
 
 export interface Action {
-  source: Player
-  target?: Player
-  attackType?: AttackType,
+  sourcePlayer: PlayerName
+  targetPlayer?: PlayerName
+  attack?: Attack,
   gameOver?: boolean;
 }

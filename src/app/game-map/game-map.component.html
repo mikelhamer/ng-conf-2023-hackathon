@@ -1,16 +1,23 @@
 <div class="gamemap">
-    <div class="characterSection">
-        <app-character [characterImage]="currentEnemy.characterImage"
-                    [name]="currentEnemy.name"
-                    [hp]="currentEnemy.max_hp"
-                    [mp]="currentEnemy.max_mp"></app-character>
-        
-    </div>
-    <div class="seperator"></div>
-    <div class="characterSection">
-        <app-character [characterImage]="currentHero.characterImage"
-                [name]="currentEnemy.name"
-                [hp]="currentEnemy.max_hp"
-                [mp]="currentEnemy.max_mp"></app-character>
-    </div>
+  <div class="characterSection">
+    <app-character [characterImage]="currentEnemy.characterImage"
+                   [name]="currentEnemy.name"
+                   [hp]="currentEnemy.max_hp"
+                   [mp]="currentEnemy.max_mp"
+                   [physAttackStrength]="currentEnemy.magicStrength"
+                   [magicAttackStrength]="currentEnemy.physicalStrength">
+
+    </app-character>
+  </div>
+  <div class="seperator"></div>
+  <div class="characterSection">
+    <app-character [characterImage]="currentHero.characterImage"
+                   [name]="currentEnemy.name"
+                   [hp]="currentEnemy.max_hp"
+                   [mp]="currentEnemy.max_mp"
+                   [physAttackStrength]="currentEnemy.magicStrength"
+                   [magicAttackStrength]="currentEnemy.physicalStrength">
+    </app-character>
+  </div>
 </div>
+

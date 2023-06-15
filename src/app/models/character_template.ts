@@ -1,7 +1,10 @@
+import {PlayerName} from '../core/action';
+
 export interface CharacterTemplate {
     characterImage: string;
-    name: string;
+    name: PlayerName;
     max_hp: number;
     max_mp: number;
-    strength: number;
+    physicalStrength: number;
+    magicStrength: number;
 }
