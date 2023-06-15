@@ -12,5 +12,5 @@ import { GameMapComponent } from './game-map/game-map.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-conf-2023-hackathon';
+  title = 'Bat Signals';
 }
