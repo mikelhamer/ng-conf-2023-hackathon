@@ -1,6 +1,6 @@
 export enum PlayerName {
-  BATMAN,
-  JOKER
+  BATMAN = 'BATMAN',
+  JOKER = 'JOKER'
 }
 
 export interface Attack {
