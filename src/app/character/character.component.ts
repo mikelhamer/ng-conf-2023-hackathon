@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,5 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./character.component.scss']
 })
 export class CharacterComponent {
-
+  @Input({required: true}) characterImage: string = '';
+  @Input({required: true}) name: string = '';
+  @Input({required: true}) hp: number = 0;
+  @Input({required: true}) mp: number = 0;
 }
