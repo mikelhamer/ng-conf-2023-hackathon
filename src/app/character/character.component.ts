@@ -24,7 +24,7 @@ export class CharacterComponent implements OnInit {
 
   ngOnInit(): void {
     this.actionSubscription = this.gameService.onAction(action => {
-      if (action.sourcePlayer === this.name) {
+      if (action.targetPlayer === this.name) {
         if (action.attack) {
           this.hp -= action.attack.strength;
           if (this.hp <= 0) {
