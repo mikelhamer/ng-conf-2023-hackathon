@@ -1,0 +1,17 @@
+.container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+app-aifred {
+    width: 100%;
+    flex-grow: 0;
+}
+
+app-game-map {
+    width: 100%;
+    flex-grow: 1;
+}
