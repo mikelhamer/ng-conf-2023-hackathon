@@ -3,10 +3,9 @@
         <img src="{{characterImage}}"/>
         <h1>{{name}}</h1>
     </div>
-    <p>MP: {{mp}}</p>
     <p>HP: {{hp}}</p>
 </div>
 <div class="buttons">
-  <button (click)="onPhysicalAttack()">Physical Attack</button>
-  <button (click)="onMagicAttack()">Magic Attack</button>
+  <button (click)="onPhysicalAttack()">{{name === PlayerName.BATMAN ? 'Punch' : 'Cane'}}</button>
+  <button (click)="onMagicAttack()">{{name === PlayerName.BATMAN ? 'Batarang' : 'Hand Buzzer'}}</button>
 </div>

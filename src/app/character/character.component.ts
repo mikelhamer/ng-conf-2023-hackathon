@@ -68,4 +68,5 @@ export class CharacterComponent implements OnInit {
     }
   }
 
+  protected readonly PlayerName = PlayerName;
 }
